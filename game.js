@@ -94,3 +94,22 @@ var game = {
         });
     }
 };
+
+// Event listeners for keyboard events
+window.addEventListener('keydown', function(event) {
+    switch(event.key) {
+        case 'ArrowUp':
+            // Move player up
+            game.player.position.y -= game.player.speed;
+            break;
+        case 'ArrowDown':
+            // Move player down
+            game.player.position.y += game.player.speed;
+            break;
+        case 'ArrowLeft':
+            // Move player left
+            game.player.position.x -= game.player.speed;
+            break;
+        case 'ArrowRight':
+            // Move player right
+            game.player.position.x +=
