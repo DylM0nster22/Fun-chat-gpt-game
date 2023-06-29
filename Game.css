@@ -1,1 +1,16 @@
+body {
+    background-color: #000;
+    color: #fff;
+}
 
+#gameArea {
+    width: 800px;
+    height: 600px;
+    border: 1px solid #fff;
+    margin: 0 auto;
+}
+	#scoreBoard {
+    width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
