@@ -48,21 +48,49 @@ var game = {
 
     // This function will be called when the game starts
     start: function() {
-        // Initialize game
         this.state = 'running';
+        this.player.position = { x: 0, y: 0 };
+        this.enemies.forEach(function(enemy) {
+            enemy.position = { x: Math.random() * 100, y: Math.random() * 100 };
+        });
+        this.items.forEach(function(item) {
+            item.position = { x: Math.random() * 100, y: Math.random() * 100 };
+        });
     },
 
     // This function will be called when the game is updated
     update: function() {
-        // Update game state
-        // Move player and enemies
+        // Move player
+        this.player.position.x += this.player.speed;
+
+        // Move enemies
+        this.enemies.forEach(function(enemy) {
+            enemy.position.x += enemy.speed;
+        });
+
         // Check for collisions
-        // Update score and lives
+        // If player collides with an enemy, decrease lives
+        // If player collides with an item, increase score
     },
 
     // This function will be called when the game is drawn
     draw: function() {
-        // Draw game state
-        // Draw player, enemies, and items
+        // Clear game area
+
+        // Draw player
+        // You'll need to replace this with actual drawing code
+        console.log('Draw player at', this.player.position);
+
+        // Draw enemies
+        this.enemies.forEach(function(enemy) {
+            // You'll need to replace this with actual drawing code
+            console.log('Draw enemy at', enemy.position);
+        });
+
+        // Draw items
+        this.items.forEach(function(item) {
+            // You'll need to replace this with actual drawing code
+            console.log('Draw item at', item.position);
+        });
     }
 };
