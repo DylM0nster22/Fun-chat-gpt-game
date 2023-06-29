@@ -12,7 +12,8 @@ var game = {
     player: {
         spriteLeft: 'Player_left.png',
         spriteRight: 'Player_right.png',
-        // Other properties like position, speed, etc.
+        position: { x: 0, y: 0 },
+        speed: 5
     },
 
     // The enemies that the player must avoid
@@ -20,12 +21,14 @@ var game = {
         {
             spriteLeft: 'Enemy1_left.png',
             spriteRight: 'Enemy1_right.png',
-            // Other properties like position, speed, etc.
+            position: { x: 0, y: 0 },
+            speed: 3
         },
         {
             spriteLeft: 'Enemy2_left.png',
             spriteRight: 'Enemy2_right.png',
-            // Other properties like position, speed, etc.
+            position: { x: 0, y: 0 },
+            speed: 4
         }
     ],
 
@@ -33,26 +36,33 @@ var game = {
     items: [
         {
             sprite: 'Coin.png',
-            // Other properties like position, value, etc.
+            position: { x: 0, y: 0 },
+            value: 10
         },
         {
             sprite: 'Power_orb.png',
-            // Other properties like position, effect, etc.
+            position: { x: 0, y: 0 },
+            effect: 'extra_life'
         }
     ],
 
     // This function will be called when the game starts
     start: function() {
-        // Todo
+        // Initialize game
+        this.state = 'running';
     },
 
     // This function will be called when the game is updated
     update: function() {
-        // Todo
+        // Update game state
+        // Move player and enemies
+        // Check for collisions
+        // Update score and lives
     },
 
     // This function will be called when the game is drawn
     draw: function() {
-        // Todo
+        // Draw game state
+        // Draw player, enemies, and items
     }
-};   
+};
